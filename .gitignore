@@ -1,0 +1,13 @@
+**/.terraform/**
+.terraform
+.terraform/**
+*.tfstate
+.terraform.lock.hcl
+terraform.tfstate.backup
+**/terraform.tfstate
+*.pem
+.vscode
+.ansible
+**/.ansible/**
+**/id_rsa.pem%
+
