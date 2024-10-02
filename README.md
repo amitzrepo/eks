@@ -9,7 +9,7 @@ Ensure that you have a compatible version of Debian or Ubuntu installed. These i
 
 ### Step 1: Update the apt package index and install required packages
 
-```bash
+```yaml
 sudo apt-get update
 # apt-transport-https may be a dummy package; if so, you can skip that package
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -19,7 +19,7 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 If the `/etc/apt/keyrings` directory does not exist, create it before proceeding.
 
-```bash
+```yaml
 # Create the directory if it doesn't exist
 sudo mkdir -p -m 755 /etc/apt/keyrings
 
@@ -33,14 +33,14 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --
 
 This command adds the repository for Kubernetes v1.31. For other versions, update the URL accordingly.
 
-```bash
+```yaml
 # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 ### Step 4: Update apt and install Kubernetes components
 
-```bash
+```yaml
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 ```
