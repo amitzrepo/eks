@@ -59,23 +59,26 @@ sudo apt-get install -y kubelet kubeadm kubectl
 
 ### Step 7 (Optional): Enable and start kubelet service
 
-```bash
+```yaml
 sudo systemctl enable --now kubelet
 ```
 
 ### Step 8: Initialize kubeadm (Only for master node)
-```bash
+
+```yaml
 sudo kubeadm init
 ```
 
 ### Step 9: Deploy network
-```bash
+
+```yaml
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
 
 Your system is now ready to use Kubernetes v1.31.
 
 ### CHeck with the command
-```bash
+
+```yaml
 kubectl get nods
 ```
