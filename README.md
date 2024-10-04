@@ -13,12 +13,14 @@ Ensure that you have a compatible version of Debian or Ubuntu installed. These i
 sudo swapoff -a
 ```
 
-### Step 2: Install Docker
+### Step 2: Install Docker & start Docker
 
 ```yaml
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y apt-transport-https ca-certificates curl
 sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
 ```
 
 ### Step 3: Update the apt package index and install required packages
