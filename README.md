@@ -16,6 +16,8 @@ sudo swapoff -a
 ### Step 2: Install Docker
 
 ```yaml
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y apt-transport-https ca-certificates curl
 sudo apt install -y docker.io
 ```
 
